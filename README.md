@@ -8,6 +8,9 @@
 #### 创建项目
 ```
 npx create-react-app react-demo
+
+克隆项目：
+git clone https://github.com/qiaozhididi/react_demo.git
 ```
 
 #### 运行项目
@@ -15,6 +18,8 @@ npx create-react-app react-demo
 ```
 // 进入项目目录
 cd ./react-demo
+// 如果是克隆的需要先安装依赖
+npm install
 // 启动项目
 npm start
 ```
@@ -75,3 +80,12 @@ npm start
 组件化开发，带来了全新的开发体验和编码方式。在React 中，构建管理自身状态的封装组件，然后对其组合以构建复杂的用户UI界面
 
 由于组件逻辑使用 JavaScript 编写而非模板，因此可以在应用中传递数据，并保持与 DOM 分离。
+
+#### 什么是 JSX
+JavaScript 的语法扩展，JSX 可以生成 React "元素"，React 元素用来描述页面的结构，可以把 JSX 语法理解为 `JavaScript 和 XML 的混合体`。
+
+#### 为什么要使用 JSX？
+
+React 认为渲染逻辑本质上与其他UI逻辑内在耦合，比如，在 UI 中需要绑定处理事件、在某些时刻状态发生变化时需要通知到 UI，以及需要在 UI 中展示准备好的数据。
+
+React 并没有采用将**标记与逻辑分离到不同文件**这种人为的分离方式，而是通过将二者共同存放在称之为“组件”的松散耦合单元之中，来实现**关注点分离**。
