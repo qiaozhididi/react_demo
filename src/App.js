@@ -1,5 +1,6 @@
 import "./App.css"; //找相对路径
 import Demo from "./Demo"; 
+import MyComponent from "./MyComponent";
 
 function App() {
   const name = "QzFrato";
@@ -19,6 +20,7 @@ function App() {
         <h2 style={{color:'red'}}>标题</h2>
       </div>
       <Demo/>
+      <MyComponent />
     </div>
   );  
 }

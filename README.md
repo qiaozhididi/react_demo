@@ -101,3 +101,23 @@ React 并没有采用将**标记与逻辑分离到不同文件**这种人为的�
 React 关注点分离：HTML + JavaScript 合并到一起，CSS还是单独编写。
 
 Vue关注点分离：HTML + JavaScript + CSS 合并一起。
+
+#### JSX 生成React元素
+
+```js
+const element = React.createElement(
+    'h1',
+     {className: 'con'},
+    'hello,Qzfrato'
+   );
+```
+```js
+//简化版
+const elementEasy = {
+type: 'h1',
+props: {
+    className: 'con',
+    children: 'hello,qiaozhididi'
+    }
+};
+```
