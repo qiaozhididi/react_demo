@@ -84,8 +84,20 @@ npm start
 #### 什么是 JSX
 JavaScript 的语法扩展，JSX 可以生成 React "元素"，React 元素用来描述页面的结构，可以把 JSX 语法理解为 `JavaScript 和 XML 的混合体`。
 
+`{ }`执行js 语法。
+
 #### 为什么要使用 JSX？
 
 React 认为渲染逻辑本质上与其他UI逻辑内在耦合，比如，在 UI 中需要绑定处理事件、在某些时刻状态发生变化时需要通知到 UI，以及需要在 UI 中展示准备好的数据。
 
 React 并没有采用将**标记与逻辑分离到不同文件**这种人为的分离方式，而是通过将二者共同存放在称之为“组件”的松散耦合单元之中，来实现**关注点分离**。
+
+#### JSX的Class 和Style 属性
+
+在jsx中，`class`是关键字，定义标签的`class`需要使用`className`；(注意：使用小驼峰命名法)
+
+内联设置元素的Style：使用`{{}}`定义属性（优先级高，不建议使用）。或者单独编写CSS文件，在jsx中使用Import 引入。
+
+React 关注点分离：HTML + JavaScript 合并到一起，CSS还是单独编写。
+
+Vue关注点分离：HTML + JavaScript + CSS 合并一起。
