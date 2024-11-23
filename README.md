@@ -121,3 +121,24 @@ props: {
     }
 };
 ```
+
+### 条件渲染
+
+使用if
+```js
+const flag=true
+if(flag){
+  return <div>True</div>
+}else{
+  return <div>False</div>
+}
+```
+使用三目运算符
+```js
+const flag = true
+return flag ? <div>True</div> : <div>False</div>
+或
+const flag = true
+const element=flag ? <div>True</div> : <div>False</div>
+return element
+```

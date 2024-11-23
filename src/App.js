@@ -1,6 +1,7 @@
 import "./App.css"; //找相对路径
-import Demo from "./Demo"; 
-import MyComponent from "./MyComponent";
+import Demo from "./Component/Demo"; 
+import MyComponent from "./Component/MyComponent";
+import IFDemo from "./Component/IFDemo";
 
 function App() {
   const name = "QzFrato";
@@ -21,6 +22,7 @@ function App() {
       </div>
       <Demo/>
       <MyComponent />
+      <IFDemo />
     </div>
   );  
 }
