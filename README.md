@@ -142,3 +142,27 @@ const flag = true
 const element=flag ? <div>True</div> : <div>False</div>
 return element
 ```
+
+与运算符&&
+```js
+const flag=true
+return flag && <div>生存吧</div>
+
+const flag=true
+return(
+    <div>
+       {flag && "生存吧"}
+    </div>
+)
+```
+
+提示：
+
+在 `JavaScript` 中，`true && expression` 总是会返回 `expression`, 而 `false && expression` 总是会返回 `false`。
+因此，如果条件是 `true`，`&&` 右侧的元素就会被渲染，如果是 `false`，React 会忽略并跳过它。
+
+使用null
+```js
+const flag=true
+return flag ?<div>生存吧</div> : null
+```

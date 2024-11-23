@@ -13,13 +13,17 @@ function IFDemo() {
   //     );
   //   }
 
-  return !flag ? (
-    <div>生存吧</div>
-  ) : (
-    <div>
-      <h2>毁灭吧</h2>
-    </div>
-  );
+//   return !flag ? (
+//     <div>生存吧</div>
+//   ) : (
+//     <div>
+//       <h2>毁灭吧</h2>
+//     </div>
+//   );
+
+// return flag && <div>生存吧</div>
+
+return flag ?<div>生存吧</div> : null
 }
 
 export default IFDemo;
