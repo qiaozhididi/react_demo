@@ -13,6 +13,7 @@ import EventListDemo from "./Component/EventListDemo";
 import FunComponent from "./Component/FunComponent";
 import ClassComponent from "./Component/ClassComponent";
 import ClassEventDemo from "./Component/ClassEventDemo";
+import Parent from "./Compose/Parent";
 
 function App() {
   const name = "QzFrato";
@@ -26,26 +27,31 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Hello World!{element}</h1>
+      {/* 基础使用 */}
+      {/* <h1>Hello World!{element}</h1> */}
       {/* {image} */}
       {/* {image2} */}
-      <div>
+      {/* 样式属性 */}
+      {/* <div>
         <h2 style={{ color: "red" }}>标题</h2>
-      </div>
+      </div> */}
       {/* <Demo/> */}
       {/* <MyComponent /> */}
       {/* <IFDemo /> */}
       {/* <ListView/>
       <DataListView/> */}
       {/* <KeyDemo/> */}
-      <EventDemo />
+      {/* 事件处理 */}
+      {/* <EventDemo />
       <EventObjDemo />
       <EventParamsDemo1 />
       <EventParamsDemo2 />
       <EventListDemo />
       <FunComponent />
       <ClassComponent />
-      <ClassEventDemo />
+      <ClassEventDemo /> */}
+      {/* 组件关系 */}
+      <Parent />
     </div>
   );
 }
