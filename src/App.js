@@ -2,10 +2,12 @@ import "./App.css"; //找相对路径
 import Demo from "./Component/Demo"; 
 import MyComponent from "./Component/MyComponent";
 import IFDemo from "./Component/IFDemo";
+import ListView from "./Component/ListView";
+import DataListView from "./Component/DataListView";
 
 function App() {
   const name = "QzFrato";
-  const element = <h1>{name}</h1>;
+  const element = <p>{name}</p>;
   const image = (
     <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.e6iItqBlqt6l6K261WPMXAHaFj?rs=1&pid=ImgDetMain" />
   );
@@ -15,14 +17,16 @@ function App() {
   return (
     <div className="container">
       <h1>Hello World!{element}</h1>
-      {image}
-      {image2}
+      {/* {image} */}
+      {/* {image2} */}
       <div>
         <h2 style={{color:'red'}}>标题</h2>
       </div>
-      <Demo/>
-      <MyComponent />
-      <IFDemo />
+      {/* <Demo/> */}
+      {/* <MyComponent /> */}
+      {/* <IFDemo /> */}
+      <ListView/>
+      <DataListView/>
     </div>
   );  
 }

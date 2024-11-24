@@ -166,3 +166,9 @@ return(
 const flag=true
 return flag ?<div>生存吧</div> : null
 ```
+
+### 列表渲染
+
+使用map可以渲染数组
+
+注意：key定义
