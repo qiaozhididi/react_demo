@@ -190,3 +190,6 @@ key 详细介绍：https://robinpokorny.com/blog/index-as-a-key-is-an-anti-patte
 
 ### 事件对象
 默认情况下，react会传递一个事件对象到事件的处理函数，这个事件对象是一个合成事件对象。
+
+### 事件处理程序传递参数
+
