@@ -1,0 +1,15 @@
+.nav {
+  width: 100%;
+}
+.nav ul {
+  list-style: none;
+  overflow: hidden;
+  clear: both ;
+}
+.nav ul li {
+  float: left;
+  margin: 0 20px;
+}
+.nav ul li a {
+  text-decoration: none;
+}

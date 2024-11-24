@@ -1,21 +1,22 @@
 import "./App.css"; //找相对路径
-import Demo from "./Component/Demo";
-import MyComponent from "./Component/MyComponent";
-import IFDemo from "./Component/IFDemo";
-import ListView from "./Component/ListView";
-import DataListView from "./Component/DataListView";
-import KeyDemo from "./Component/KeyDemo";
-import EventDemo from "./Component/EventDemo";
-import EventObjDemo from "./Component/EventObjDemo";
-import EventParamsDemo1 from "./Component/EventParamsDemo1";
-import EventParamsDemo2 from "./Component/EventParamsDemo2";
-import EventListDemo from "./Component/EventListDemo";
-import FunComponent from "./Component/FunComponent";
-import ClassComponent from "./Component/ClassComponent";
-import ClassEventDemo from "./Component/ClassEventDemo";
+import Demo from "./Components/Demo";
+import MyComponent from "./Components/MyComponent";
+import IFDemo from "./Components/IFDemo";
+import ListView from "./Components/ListView";
+import DataListView from "./Components/DataListView";
+import KeyDemo from "./Components/KeyDemo";
+import EventDemo from "./Components/EventDemo";
+import EventObjDemo from "./Components/EventObjDemo";
+import EventParamsDemo1 from "./Components/EventParamsDemo1";
+import EventParamsDemo2 from "./Components/EventParamsDemo2";
+import EventListDemo from "./Components/EventListDemo";
+import FunComponent from "./Components/FunComponent";
+import ClassComponent from "./Components/ClassComponent";
+import ClassEventDemo from "./Components/ClassEventDemo";
 import Parent from "./Compose/Parent";
 import PropsFun from "./Compose/PropsFun";
 import PropsClass from "./Compose/PropsClass";
+import NavComponent from "./Components/NavComponent";
 
 function App() {
   const name = "QzFrato";
@@ -28,6 +29,8 @@ function App() {
     "https://tse2-mm.cn.bing.net/th/id/OIP-C.sOzZsfZV9rc7epSGktkNqwHaGL?rs=1&pid=ImgDetMain";
   const image2 = <img src={imgUrl} />;
 
+  //声明导航数据
+  const navs1 = ["Python", "前端", "Java", "C#"];
   return (
     <div className="container">
       {/* 基础使用 */}
@@ -67,6 +70,7 @@ function App() {
         arr={["qz", "dd", "qzfrato"]}
         user={user}
       />
+      <NavComponent navs={navs1} />
     </div>
   );
 }
