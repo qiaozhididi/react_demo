@@ -12,6 +12,7 @@ import EventParamsDemo2 from "./Component/EventParamsDemo2";
 import EventListDemo from "./Component/EventListDemo";
 import FunComponent from "./Component/FunComponent";
 import ClassComponent from "./Component/ClassComponent";
+import ClassEventDemo from "./Component/ClassEventDemo";
 
 function App() {
   const name = "QzFrato";
@@ -44,6 +45,7 @@ function App() {
       <EventListDemo />
       <FunComponent />
       <ClassComponent />
+      <ClassEventDemo />
     </div>
   );
 }
