@@ -5,6 +5,7 @@ import IFDemo from "./Component/IFDemo";
 import ListView from "./Component/ListView";
 import DataListView from "./Component/DataListView";
 import KeyDemo from "./Component/KeyDemo"
+import EventDemo from "./Component/EventDemo";
 
 function App() {
   const name = "QzFrato";
@@ -29,6 +30,7 @@ function App() {
       <ListView/>
       <DataListView/>
       <KeyDemo/>
+      <EventDemo />
     </div>
   );  
 }

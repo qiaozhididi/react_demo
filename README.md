@@ -182,3 +182,8 @@ key 详细介绍：https://robinpokorny.com/blog/index-as-a-key-is-an-anti-patte
 在React中效率高的原因：
 
 - 1.DOM的操作上速度非常快.(React设计是存在一个虚拟DOM)
+
+## React 事件处理
+
+- React事件的命名采用小驼峰命名(camelCase)，而不是纯小写。
+- 使用JSX语法的时候需要传入一个函数作为事件处理函数，而不是一个字符串。
