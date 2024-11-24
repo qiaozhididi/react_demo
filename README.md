@@ -193,3 +193,191 @@ key 详细介绍：https://robinpokorny.com/blog/index-as-a-key-is-an-anti-patte
 
 ### 事件处理程序传递参数
 
+一、事件绑定的基本概念
+事件绑定，简而言之，就是将用户的操作（如点击、输入等）与代码中的特定函数关联起来。在React中，这一过程通过在JSX中指定事件处理函数来实现。
+
+二、基本事件绑定
+在React中，事件处理函数的命名遵循驼峰命名法（camelCase），并通过JSX语法绑定到对应的元素上。例如：
+```js
+class ClickButton extends React.Component {
+  handleClick() {
+    console.log('按钮被点击了');
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        点击我
+      </button>
+    );
+  }
+}
+```
+在上面的示例中，onClick事件被绑定到handleClick方法，当按钮被点击时，handleClick方法将被执行。
+
+三、绑定this上下文
+在类组件中，事件处理函数中的this默认不绑定到组件实例上，可能会导致this为undefined。解决这个问题有两种常见方法：
+
+在构造函数中绑定this：
+```js
+class ClickButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    console.log('按钮被点击了');
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        点击我
+      </button>
+    );
+  }
+}
+```
+使用箭头函数定义方法：
+```js
+class ClickButton extends React.Component {
+  handleClick = () => {
+    console.log('按钮被点击了');
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        点击我
+      </button>
+    );
+  }
+}
+```
+四、传递参数
+在事件处理函数中，有时需要传递额外的参数。React提供了多种方式来实现这一点：
+
+使用箭头函数：
+```js
+class GreetingButton extends React.Component {
+  handleClick(name) {
+    console.log(`Hello, ${name}!`);
+  }
+
+  render() {
+    return (
+      <button onClick={() => this.handleClick('Jack')}>
+        点击我
+      </button>
+    );
+  }
+}
+```
+```js
+结合事件对象和自定义参数：
+class GreetingButton extends React.Component {
+  handleClick(e, name) {
+    console.log(e);
+    console.log(`Hello, ${name}!`);
+  }
+
+  render() {
+    return (
+      <button onClick={(e) => this.handleClick(e, 'Jack')}>
+        点击我
+      </button>
+    );
+  }
+}
+```
+五、事件对象
+在事件处理函数中，事件对象e提供了丰富的信息，如事件类型、目标元素等。例如：
+```js
+class InputComponent extends React.Component {
+  handleChange(e) {
+    console.log(e.target.value);
+  }
+
+  render() {
+    return (
+      <input type="text" onChange={this.handleChange} />
+    );
+  }
+}
+```
+六、事件委托
+React中的事件绑定实际上是利用了事件委托的机制。所有的事件监听器都会被绑定到根节点上，然后根据事件的目标元素进行分发。这种方式提高了事件处理的效率。
+
+七、常见事件处理
+React支持多种常见的事件类型，如onClick、onChange、onSubmit等。以下是一些常见的事件处理示例：
+
+处理表单提交：
+```js
+class FormComponent extends React.Component {
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('表单提交了');
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <button type="submit">提交</button>
+      </form>
+    );
+  }
+}
+```
+处理输入框变化：
+```js
+class InputComponent extends React.Component {
+  handleChange(e) {
+    console.log(e.target.value);
+  }
+
+  render() {
+    return (
+      <input type="text" onChange={this.handleChange} />
+    );
+  }
+}
+```
+八、优化事件处理
+为了提高应用的性能，可以采取以下优化措施：
+
+避免在渲染方法中使用匿名函数：
+匿名函数会在每次渲染时创建一个新的函数实例，这可能会导致不必要的重渲染。尽量在组件的构造函数或类属性中定义事件处理函数。
+
+使用事件委托：
+利用React的事件委托机制，尽量减少事件监听器的数量。
+
+防抖和节流：
+对于高频触发的事件（如onScroll、onResize），可以使用防抖（debounce）或节流（throttle）技术来减少事件处理函数的调用频率。
+
+## 函数组件与class组件
+
+- 函数组件
+
+可以使用首字母为大写的名称定义一个函数，并且让这个函数返回一个React元素，这类组件被称为“函数组件”
+```js
+function Home(){
+  return <h1>Hello World!</h1>
+
+}
+```
+
+- 类组件
+
+可以使用ES6 的class来定义组件，通过render函数来返回react元素。
+```js
+class Home extends React.Component{
+  render(){
+    return <h1>Hello World!</h1>
+  }
+}
+```
+
+- 渲染组件
+
+使用组件，直接像使用普通标签那样使用就可以了。

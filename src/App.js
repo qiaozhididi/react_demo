@@ -10,6 +10,8 @@ import EventObjDemo from "./Component/EventObjDemo";
 import EventParamsDemo1 from "./Component/EventParamsDemo1";
 import EventParamsDemo2 from "./Component/EventParamsDemo2";
 import EventListDemo from "./Component/EventListDemo";
+import FunComponent from "./Component/FunComponent";
+import ClassComponent from "./Component/ClassComponent";
 
 function App() {
   const name = "QzFrato";
@@ -40,6 +42,8 @@ function App() {
       <EventParamsDemo1 />
       <EventParamsDemo2 />
       <EventListDemo />
+      <FunComponent />
+      <ClassComponent />
     </div>
   );
 }
