@@ -4,6 +4,7 @@ import MyComponent from "./Component/MyComponent";
 import IFDemo from "./Component/IFDemo";
 import ListView from "./Component/ListView";
 import DataListView from "./Component/DataListView";
+import KeyDemo from "./Component/KeyDemo"
 
 function App() {
   const name = "QzFrato";
@@ -27,6 +28,7 @@ function App() {
       {/* <IFDemo /> */}
       <ListView/>
       <DataListView/>
+      <KeyDemo/>
     </div>
   );  
 }

@@ -171,4 +171,14 @@ return flag ?<div>生存吧</div> : null
 
 使用map可以渲染数组
 
-注意：key定义
+`key`帮助 React 识别哪些元素改变了，比如被添加或删除。因此你应当给数组中的每一个元素赋予一个确定的标识。
+
+一个元素的 key 最好是这个元素在列表中拥有的一个独一无二的字符串。通常，我们使用数据中的 id 来作为元素的 key
+
+当元素没有确定 id 的时候，万不得已你可以使用元素索引 index 作为 key （index作为key的话，如果下标发生变化，其余数据也会重新渲染）
+
+key 详细介绍：https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/
+
+在React中效率高的原因：
+
+- 1.DOM的操作上速度非常快.(React设计是存在一个虚拟DOM)
