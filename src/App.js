@@ -14,10 +14,13 @@ import FunComponent from "./Component/FunComponent";
 import ClassComponent from "./Component/ClassComponent";
 import ClassEventDemo from "./Component/ClassEventDemo";
 import Parent from "./Compose/Parent";
+import PropsFun from "./Compose/PropsFun";
+import PropsClass from "./Compose/PropsClass";
 
 function App() {
   const name = "QzFrato";
   const element = <p>{name}</p>;
+  const user = { name: "QzFrato" };
   const image = (
     <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.e6iItqBlqt6l6K261WPMXAHaFj?rs=1&pid=ImgDetMain" />
   );
@@ -52,6 +55,18 @@ function App() {
       <ClassEventDemo /> */}
       {/* 组件关系 */}
       <Parent />
+      <PropsFun
+        title="传子组件标题"
+        age={20}
+        arr={["qz", "dd", "qzfrato"]}
+        user={user}
+      />
+      <PropsClass
+        title="传子组件标题"
+        age={20}
+        arr={["qz", "dd", "qzfrato"]}
+        user={user}
+      />
     </div>
   );
 }
