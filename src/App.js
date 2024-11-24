@@ -6,6 +6,7 @@ import ListView from "./Component/ListView";
 import DataListView from "./Component/DataListView";
 import KeyDemo from "./Component/KeyDemo"
 import EventDemo from "./Component/EventDemo";
+import EventObjDemo from "./Component/EventObjDemo";
 
 function App() {
   const name = "QzFrato";
@@ -31,6 +32,7 @@ function App() {
       <DataListView/>
       <KeyDemo/>
       <EventDemo />
+      <EventObjDemo/>
     </div>
   );  
 }

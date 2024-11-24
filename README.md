@@ -187,3 +187,6 @@ key 详细介绍：https://robinpokorny.com/blog/index-as-a-key-is-an-anti-patte
 
 - React事件的命名采用小驼峰命名(camelCase)，而不是纯小写。
 - 使用JSX语法的时候需要传入一个函数作为事件处理函数，而不是一个字符串。
+
+### 事件对象
+默认情况下，react会传递一个事件对象到事件的处理函数，这个事件对象是一个合成事件对象。
