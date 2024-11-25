@@ -451,3 +451,54 @@ onChange = () => {
 }
 
 ```
+
+### setState 重新渲染组件根子组件
+- 调用setState，组件的render方法会被重新调用，从而重新渲染页面
+```js
+ onChange = () => {
+    this.setState({ date: new Date() })
+    
+   }
+  render() {
+    return <div>
+      <p>{this.state.date.toLocaleTimeString()}</p>
+      <button onClick={this.onChange}>更新state</button>
+    </div>
+   }
+
+```
+- 调用setState，子组件也会被重新渲染
+```js
+//StateTest.js
+import React from 'react'
+import StateTestChild from './StateTestChild';
+
+
+export default class StateTest extends React.Component {
+  constructor() {
+    super();
+    this.state = { date: new Date(),title:'今天的天气真不错' };
+
+
+   }
+  onChange = () => {
+    this.setState({ date: new Date() })
+   }
+  render() {
+    return <div>
+      <p>{this.state.date.toLocaleTimeString()}</p>
+      <button onClick={this.onChange}>更新state</button>
+      <StateTestChild date={this.state.date.toLocaleTimeString()}/>
+    </div>
+   }
+}
+
+//StateTestChild.js
+export default function StateTestChild (props){
+  return <div>
+    <h3>我是子组件</h3>
+     子组件的时间：{props.date}
+  </div>
+}
+
+```

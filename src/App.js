@@ -22,6 +22,7 @@ import ComposeComponent1 from "./DataComponent/ComposeConponent1";
 import ComposeComponent2 from "./DataComponent/ComposeComponent2";
 import StateDemo from "./StateComponent/StateDemo";
 import StateUpdate from "./StateComponent/StateUpdate";
+import SetStateDemo from "./StateComponent/SetStateDemo";
 
 function App() {
   const name = "QzFrato";
@@ -94,6 +95,7 @@ function App() {
       </ComposeComponent2> */}
       <StateDemo />
       <StateUpdate />
+      <SetStateDemo />
     </div>
   );
 }
