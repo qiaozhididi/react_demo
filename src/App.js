@@ -17,6 +17,7 @@ import Parent from "./Compose/Parent";
 import PropsFun from "./Compose/PropsFun";
 import PropsClass from "./Compose/PropsClass";
 import NavComponent from "./Components/NavComponent";
+import ParentComponent from "./DataComponent/ParentComponent";
 
 function App() {
   const name = "QzFrato";
@@ -31,6 +32,7 @@ function App() {
 
   //声明导航数据
   const navs1 = ["Python", "前端", "Java", "C#"];
+  const navs2 = ["聊天", "图片", "视频", "地图"];
   return (
     <div className="container">
       {/* 基础使用 */}
@@ -71,6 +73,8 @@ function App() {
         user={user}
       />
       <NavComponent navs={navs1} />
+      <NavComponent navs={navs2} />
+      <ParentComponent /> 
     </div>
   );
 }
