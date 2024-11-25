@@ -18,6 +18,8 @@ import PropsFun from "./Compose/PropsFun";
 import PropsClass from "./Compose/PropsClass";
 import NavComponent from "./Components/NavComponent";
 import ParentComponent from "./DataComponent/ParentComponent";
+import ComposeComponent1 from "./DataComponent/ComposeConponent1";
+import ComposeComponent2 from "./DataComponent/ComposeComponent2";
 
 function App() {
   const name = "QzFrato";
@@ -59,7 +61,7 @@ function App() {
       <ClassComponent />
       <ClassEventDemo /> */}
       {/* 组件关系 */}
-      <Parent />
+      {/* <Parent />
       <PropsFun
         title="传子组件标题"
         age={20}
@@ -74,7 +76,20 @@ function App() {
       />
       <NavComponent navs={navs1} />
       <NavComponent navs={navs2} />
-      <ParentComponent /> 
+      <ParentComponent />  */}
+      {/* 在当前父组件中，传递视图给子组件，这就叫组件组合 */}
+      <ComposeComponent1>
+        <div>
+          <h3>组合标题</h3>
+          <p>组合内容</p>
+        </div>
+      </ComposeComponent1>
+      <ComposeComponent2>
+        <div>
+          <h2>组合标题2</h2>
+          <p>组合内容2</p>
+        </div>
+      </ComposeComponent2>
     </div>
   );
 }
