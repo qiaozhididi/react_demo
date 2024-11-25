@@ -418,3 +418,36 @@ props 对于数据类型没有限制，那么可以利用props传递函数，然
 思考：State与Props的区别？
 - State：负责组件内部的状态管理
 - Props：负责组件与组件之间的数据交互
+
+### State 的更新
+- 更改state不要直接修改state
+- 使用setState去更新state，setState是异步的。
+```js
+this.setState({ date: new Date() })
+//上面setState之后，下面的代码是没法获取到更新后的state的
+ console.log(this.state.date.toLocaleTimeString())
+```
+解决方案，直接给setState传递回调函数。
+```js
+ this.setState({ date: new Date() },()=>{
+    console.log(this.state.date.toLocaleTimeString())
+ })
+或
+this.setState({ date: new Date() })
+this.setState(()=>{
+  console.log(this.state.date.toLocaleTimeString())
+})
+
+```
+- setState会合并state，当你调用 setState() 的时候，React 会把你提供的对象合并到当前的 state。
+```js
+constructor() {
+  super();
+  this.state = { date: new Date(),title:'今天的天气真不错' };
+}
+onChange = () => {
+  this.setState({ date: new Date() })
+  //在这里直接设置为{date:new Date},则与原来的{date:new Date,title:'今天的天气很不错合并'}，不会直接干掉title属性，只会替换date属性的值
+}
+
+```

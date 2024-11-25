@@ -21,6 +21,7 @@ import ParentComponent from "./DataComponent/ParentComponent";
 import ComposeComponent1 from "./DataComponent/ComposeConponent1";
 import ComposeComponent2 from "./DataComponent/ComposeComponent2";
 import StateDemo from "./StateComponent/StateDemo";
+import StateUpdate from "./StateComponent/StateUpdate";
 
 function App() {
   const name = "QzFrato";
@@ -92,6 +93,7 @@ function App() {
         </div>
       </ComposeComponent2> */}
       <StateDemo />
+      <StateUpdate />
     </div>
   );
 }
