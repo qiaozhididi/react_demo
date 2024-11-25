@@ -20,6 +20,7 @@ import NavComponent from "./Components/NavComponent";
 import ParentComponent from "./DataComponent/ParentComponent";
 import ComposeComponent1 from "./DataComponent/ComposeConponent1";
 import ComposeComponent2 from "./DataComponent/ComposeComponent2";
+import StateDemo from "./StateComponent/StateDemo";
 
 function App() {
   const name = "QzFrato";
@@ -78,7 +79,7 @@ function App() {
       <NavComponent navs={navs2} />
       <ParentComponent />  */}
       {/* 在当前父组件中，传递视图给子组件，这就叫组件组合 */}
-      <ComposeComponent1>
+      {/* <ComposeComponent1>
         <div>
           <h3>组合标题</h3>
           <p>组合内容</p>
@@ -89,7 +90,8 @@ function App() {
           <h2>组合标题2</h2>
           <p>组合内容2</p>
         </div>
-      </ComposeComponent2>
+      </ComposeComponent2> */}
+      <StateDemo />
     </div>
   );
 }
