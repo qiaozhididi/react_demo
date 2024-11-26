@@ -24,6 +24,7 @@ import StateDemo from "./StateComponent/StateDemo";
 import StateUpdate from "./StateComponent/StateUpdate";
 import SetStateDemo from "./StateComponent/SetStateDemo";
 import PropsStateDemo from "./StateComponent/PropsStateDemo";
+import OneLifeCycle from "./LifeCycleComponent/OneLifeCycle";
 
 function App() {
   const name = "QzFrato";
@@ -94,10 +95,11 @@ function App() {
           <p>组合内容2</p>
         </div>
       </ComposeComponent2> */}
-      <StateDemo />
+      {/* <StateDemo />
       <StateUpdate />
       <SetStateDemo />
-      <PropsStateDemo></PropsStateDemo>
+      <PropsStateDemo></PropsStateDemo> */}
+      <OneLifeCycle />
     </div>
   );
 }

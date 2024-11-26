@@ -506,3 +506,60 @@ export default function StateTestChild (props){
 ### 基于Props初始化State
 - 构造函数当中的参数可以获取props。
 - class 组件应该始终使用 props 参数来调用父类的构造函数。
+
+## 组件声明周期
+在这个过程当中，它会有不同的状态，针对不同的状态，都有对应的一些钩子函数，我们可以借助这些钩子函数做这样的事情：针对组件的某个生命状态去执行某些代码。
+
+### 生命周期关键节点
+- 挂载时：constructor、static getDerivedStateFromProps 、render() 、componentDidMount()
+- 更新时：static getDerivedStateFromProps 、shouldComponentUpdate 、render()、getSnapshotBeforeUpdate、componentDidUpdate
+- 卸载时：componentWillUnmount
+
+#### 挂载时
+挂载阶段指的是组件被初始化到第一次渲染到页面上这个过程。
+
+挂载阶段的钩子函数：
+- `constructor` ：构造函数，组件被初始化时调用，在生命周期中只会被调用一次。
+- `static getDerivedStateFromProps`：是组件类的静态函数， 组件props或者state初始化或者变化时调用，最终可以返回一个新的state对象，使用率低。
+- `render` ：定义并返回组件的界面（react元素）。
+- `componentDidMount`： 生成了真实DOM并被渲染到页面之后调用，在生命周期中只会被调用一次。
+```js
+import React, { Component } from 'react'
+
+
+export default class LifeCycle extends Component {
+  
+  constructor(props) {
+    console.log('constructor')
+    super(props);
+    // 初始化 state状态
+    this.state = {
+      text: "初始值"
+     }
+   }
+  // 使用率低：它应返回一个对象来更新 state，如果返回 null 则state不变
+  // getDerivedStateFromProps 在组件的state或者props初始化或者发生变化时调用
+  static getDerivedStateFromProps(props, state) {
+    console.log('getDerivedStateFromProps')
+    return {
+      text: props.text
+     }
+   }
+  // 返回UI
+  render() {
+    console.log('render')
+    return (
+      <div>
+        <h3>组件生命周期</h3>
+        <p>{this.state.text}</p>
+      </div>
+     )
+   }
+  // 组件已经渲染完成
+  // 这个时候组件对应的DOM已经插入到DOM文档当中了
+  componentDidMount() {
+    console.log("componentDidMount");
+   }
+}
+
+```
