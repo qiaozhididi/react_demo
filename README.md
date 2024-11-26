@@ -563,3 +563,60 @@ export default class LifeCycle extends Component {
 }
 
 ```
+
+#### 更新时
+更新阶段指的是当影响组件的数据状态发生变更时（props，state发生变更）,重新更新渲染组件页面的过程。
+
+更新阶段的钩子函数：
+- `static getDerivedStateFromProps` ：组件props或者state变化时调用
+- `shouldComponentUpdate`： 返回布尔值，true则组件会重新渲染，false则不会重新渲染。
+- `render` ：定义并返回组件的界面（react元素）。
+- `getSnapshotBeforeUpdate`：在更新DOM之前调用，必须要返回一个值，要与 componentDidUpdate() 方法一起使用。
+- `componentDidUpdate`： 页面更新之后调用
+```js
+import React, { Component } from 'react'
+
+
+export default class LifeCycleComponent extends Component {
+ constructor(){
+  super();
+  this.state = {
+   text:"测试文本"
+   }
+  }
+ clickHandle(){
+  this.setState({
+   text:"修改数据"
+   })
+  }
+ render() {
+  return (
+   <div>
+    <h3>组件生命周期</h3>
+    <p>{ this.state.text }</p>
+    <button onClick={ this.clickHandle.bind(this) }>点击</button>
+   </div>
+   )
+  }
+  
+ // shouldComponentUpdate() 方法会返回一个布尔值，指定 React 是否应该继续渲染，默认值是 true， 即 state 每次发生变化组件都会重新渲染。
+ shouldComponentUpdate(nextProps, nextState){
+  // 在这里可以获取最新的props和state
+  return true;
+  }
+  
+ // 使用率低
+ // getSnapshotBeforeUpdate() 方法在最近一次渲染输出（提交到 DOM 节点）之前调用
+ // 在 getSnapshotBeforeUpdate() 方法中，我们可以访问更新前的 props 和 state。
+ // getSnapshotBeforeUpdate() 方法需要与 componentDidUpdate() 方法一起使用，否则会出现错误
+ getSnapshotBeforeUpdate(prevProps, prevState){
+  console.log("更新DOM前",prevState);
+  return null;
+  }
+  
+ //DOM更新之后执行
+ componentDidUpdate(prevProps, prevState){
+  console.log("更新DOM后",this.state);
+  }
+}
+```
