@@ -502,3 +502,7 @@ export default function StateTestChild (props){
 }
 
 ```
+
+### 基于Props初始化State
+- 构造函数当中的参数可以获取props。
+- class 组件应该始终使用 props 参数来调用父类的构造函数。
