@@ -620,3 +620,8 @@ export default class LifeCycleComponent extends Component {
   }
 }
 ```
+#### 卸载时
+卸载阶段指的是组件从DOM移除的过程。
+
+卸载阶段的钩子函数：
+- `componentWillUnmount`：组件被移除之前调用。可以在这个钩子函数里面执行必要的清理操作。例如，清除定时器，关闭持续的网络连接，移除监听器等。

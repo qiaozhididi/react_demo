@@ -26,6 +26,7 @@ import SetStateDemo from "./StateComponent/SetStateDemo";
 import PropsStateDemo from "./StateComponent/PropsStateDemo";
 import OneLifeCycle from "./LifeCycleComponent/OneLifeCycle";
 import TwoLifeCycle from "./LifeCycleComponent/TwoLifeCycle";
+import ThreeLifeCycle from "./LifeCycleComponent/ThreeLifeCycle";
 
 function App() {
   const name = "QzFrato";
@@ -101,7 +102,8 @@ function App() {
       <SetStateDemo />
       <PropsStateDemo></PropsStateDemo> */}
       {/* <OneLifeCycle  /> */}
-      <TwoLifeCycle />
+      {/* <TwoLifeCycle /> */}
+      <ThreeLifeCycle />
     </div>
   );
 }
