@@ -625,3 +625,6 @@ export default class LifeCycleComponent extends Component {
 
 卸载阶段的钩子函数：
 - `componentWillUnmount`：组件被移除之前调用。可以在这个钩子函数里面执行必要的清理操作。例如，清除定时器，关闭持续的网络连接，移除监听器等。
+
+## 表单 - 受控组件
+使 React 的 state 成为表单显示的“唯一数据源”，并且使用React控制用户输入过程中表单发生的操作。这种由state驱动的表单元素就叫做“受控组件”
