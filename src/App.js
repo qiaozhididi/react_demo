@@ -28,6 +28,7 @@ import OneLifeCycle from "./LifeCycleComponent/OneLifeCycle";
 import TwoLifeCycle from "./LifeCycleComponent/TwoLifeCycle";
 import ThreeLifeCycle from "./LifeCycleComponent/ThreeLifeCycle";
 import FormTest1 from "./FormComponent/FormTest1";
+import FormTest2 from "./FormComponent/FormTest2";
 
 function App() {
   const name = "QzFrato";
@@ -107,6 +108,7 @@ function App() {
       {/* <TwoLifeCycle /> */}
       {/* <ThreeLifeCycle /> */}
       <FormTest1 />
+      <FormTest2 />
     </div>
   );
 }

@@ -628,3 +628,8 @@ export default class LifeCycleComponent extends Component {
 
 ## 表单 - 受控组件
 使 React 的 state 成为表单显示的“唯一数据源”，并且使用React控制用户输入过程中表单发生的操作。这种由state驱动的表单元素就叫做“受控组件”
+
+## 表单 - 受控组件处理多个输入
+当页面有多个输入框的时候，为每个输入框都添加一个独立的事件处理函数太过麻烦
+
+可以给每个元素添加 name 属性，并让处理函数根据 event.target.name 的值选择要执行的操作
