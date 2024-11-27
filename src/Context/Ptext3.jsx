@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import MyContext from "./MyContext";
 
 export default class Ptext3 extends Component {
+  //并不会影响Context中的数据更新，只会影响Ptext3的渲染
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
   render() {
     return (
       <div>

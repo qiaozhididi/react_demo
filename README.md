@@ -680,3 +680,13 @@ MyClass.contextType = MyContext;
 挂载在 class 上的 contextType 属性会被重赋值为一个由 React.createContext()创建的 Context 对象。这能让你使用 this.context 来消费最近 Context 上的那个值。
 
 你可以在任何生命周期中访问到它，包括 render 函数中。
+
+Context 更新
+
+当 Provider 的 value 值发生变化时，它内部的所有消费组件都会重新渲染。
+
+提示：
+
+- 消费组件是否重新渲染不受shouldComponentUpdate的控制。
+
+- 其父组件使用shouldComponentUpdate停止了渲染或者消费组件本身使用shouldComponentUpdate停止渲染，也不影响消费组件的继续更新。
