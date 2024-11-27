@@ -641,3 +641,42 @@ export default class LifeCycleComponent extends Component {
 可以使用替代方案：使用非受控组件，这时表单数据将由 DOM 节点来处理。
 
 - 提示：如果你不介意代码美观性，并且希望快速编写代码，使用非受控组件往往可以减少你的代码量。否则，你应该使用受控组件。
+
+## Context 的作用
+React组件中数据是通过 props 属性自上而下（由父及子）进行传递的，但是有的时候中间的一些组件可能并不需要props的值。
+
+Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。
+
+- 何时使用 Context
+
+如果要在组件树中去共享某些数据，并且要避免通过中间元素传递 props，则可以使用Context来实现。
+
+- 创建Context对象：
+
+React.createContext(defaultValue)
+```js
+const MyContext = React.createContext(defaultValue);
+
+```
+- Context的Provider组件
+
+Contenxt的Provider组件用来提供其它组件要共享的数据。
+
+设置value属性来设置要共享的数据。
+```js
+<MyContext.Provider value={/* 某个值 */}>
+
+```
+提示：我们把要使用共享数据的组件称为消费组件。
+
+- Class.contextType
+为组件类添加contextType属性，从而获取Context对象。
+```js
+MyClass.contextType = MyContext;
+
+```
+提示：
+
+挂载在 class 上的 contextType 属性会被重赋值为一个由 React.createContext()创建的 Context 对象。这能让你使用 this.context 来消费最近 Context 上的那个值。
+
+你可以在任何生命周期中访问到它，包括 render 函数中。
