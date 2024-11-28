@@ -760,3 +760,9 @@ class MyComponent extends React.Component {
 
 ### Refs & 类组件
 使用Refs的时候，当 ref 属性用于自定义 class 组件时，ref 对象接收组件的实例作为其 current 属性。
+
+### Refs & 函数组件
+我们不能直接在函数组件上使用 ref 属性，ref的current会是一个null。
+
+转发 Refs 到DOM组件
+通过在函数组件上使用 React.forwardRef 来转发 Refs。

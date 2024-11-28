@@ -39,6 +39,7 @@ import ErrorBoundary from "./Fragments/ErrorBoundary";
 import JsError from "./Fragments/JsError";
 import RefsDemo from "./Refs/RefsDemo";
 import RefsClassDemo from "./Refs/RefsClassDemo";
+import RefsFunDemo from "./Refs/RefsFunDemo";
 
 function App() {
   const name = "QzFrato";
@@ -133,6 +134,7 @@ function App() {
       </ErrorBoundary> */}
       <RefsDemo />
       <RefsClassDemo />
+      <RefsFunDemo />
     </div>
   );
 }
