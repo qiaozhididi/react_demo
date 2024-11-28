@@ -728,7 +728,8 @@ class 组件中定义了 static getDerivedStateFromError()或 componentDidCatch(
 - Try...Catch
 - Window.onerror
 
-## Refs & DOM
+## Refs 
+### Refs & DOM
 Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。
 ```js
 class MyComponent extends React.Component {
@@ -756,3 +757,6 @@ class MyComponent extends React.Component {
 当 ref 被传递给 render 中的元素时，对该节点的引用可以在 ref 的 current 属性中被访问。
 
 提示：React 会在组件挂载时给 current 属性传入 DOM 元素，并在组件卸载时传入 null 值。ref 会在 componentDidMount 或 componentDidUpdate 生命周期钩子触发前更新。
+
+### Refs & 类组件
+使用Refs的时候，当 ref 属性用于自定义 class 组件时，ref 对象接收组件的实例作为其 current 属性。
