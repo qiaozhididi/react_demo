@@ -690,3 +690,14 @@ Context 更新
 - 消费组件是否重新渲染不受shouldComponentUpdate的控制。
 
 - 其父组件使用shouldComponentUpdate停止了渲染或者消费组件本身使用shouldComponentUpdate停止渲染，也不影响消费组件的继续更新。
+
+## Fragment
+
+为什么需要Fragment？
+React中的一个约定是：一个组件只能有一个根元素。
+在开发过程中，我们经常会遇到这样的场景：一个组件需要返回多个元素。
+
+- Fragments 允许你将子元素包裹在一起，而无需向 DOM 添加额外节点。
+- Fragments短语法使用<></>代替<React.Fragment></React.Fragment>
+
+提示：因为Fragments最终不会被渲染为DOM，所以不要在Framents上面绑定事件或者设置一些其它属性，目前只支持设置key属性。

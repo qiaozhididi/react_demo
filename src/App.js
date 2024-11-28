@@ -32,6 +32,7 @@ import FormTest2 from "./FormComponent/FormTest2";
 import FormTest3 from "./FormComponent/FormTest3";
 import PropsPtext1 from "./Props/Ptext1";
 import ContextPtext1 from "./Context/Ptext1";
+import FragMentDemo from "./Fragments/FragmentDemo";
 
 function App() {
   const name = "QzFrato";
@@ -114,8 +115,9 @@ function App() {
       {/* <FormTest1 />
       <FormTest2 />
       <FormTest3 /> */}
-      <PropsPtext1 />
-      <ContextPtext1 />
+      {/* <PropsPtext1 />
+      <ContextPtext1 /> */}
+      <FragMentDemo />
     </div>
   );
 }
