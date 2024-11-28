@@ -727,3 +727,32 @@ class 组件中定义了 static getDerivedStateFromError()或 componentDidCatch(
 错误边界无法捕获的错误，比如事件处理，异步操作。可以使用原生js支持的一些方法去捕获
 - Try...Catch
 - Window.onerror
+
+## Refs & DOM
+Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。
+```js
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return <div ref={this.myRef}>Div</div>;
+  }
+}
+```
+- 创建 Refs
+
+使用 React.createRef() 创建的。
+
+通常将 Refs 分配给实例属性，以便可以在整个组件中引用它们。
+
+- 使用Refs
+
+给对应的React 元素设置ref属性，则相当于使用 ref 去存储 DOM 节点的引用。
+
+- 访问Refs
+
+当 ref 被传递给 render 中的元素时，对该节点的引用可以在 ref 的 current 属性中被访问。
+
+提示：React 会在组件挂载时给 current 属性传入 DOM 元素，并在组件卸载时传入 null 值。ref 会在 componentDidMount 或 componentDidUpdate 生命周期钩子触发前更新。

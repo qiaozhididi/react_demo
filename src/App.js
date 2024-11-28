@@ -37,6 +37,7 @@ import MyError from "./Fragments/MyError";
 import List from "./Fragments/List";
 import ErrorBoundary from "./Fragments/ErrorBoundary";
 import JsError from "./Fragments/JsError";
+import RefsDemo from "./Refs/RefsDemo";
 
 function App() {
   const name = "QzFrato";
@@ -121,14 +122,15 @@ function App() {
       <FormTest3 /> */}
       {/* <PropsPtext1 />
       <ContextPtext1 /> */}
-      <FragMentDemo />
+      {/* <FragMentDemo />
       <h2>错误边界</h2>
-      <List />
+      <List /> */}
       {/* <MyError /> */}
-      <ErrorBoundary>{/* <MyError /> */}</ErrorBoundary>
-      <ErrorBoundary>
+      {/* <ErrorBoundary><MyError /></ErrorBoundary> */}
+      {/* <ErrorBoundary>
         <JsError />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
+      <RefsDemo />
     </div>
   );
 }
