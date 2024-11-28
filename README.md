@@ -722,3 +722,8 @@ React中的一个约定是：一个组件只能有一个根元素。
 - 定义一个错误边界的组件
 
 class 组件中定义了 static getDerivedStateFromError()或 componentDidCatch() 这两个生命周期方法中的任意一个（或两个）时，那么这个组件就变成一个错误边界的组件。
+
+### 错误边界无法捕捉的错误
+错误边界无法捕获的错误，比如事件处理，异步操作。可以使用原生js支持的一些方法去捕获
+- Try...Catch
+- Window.onerror

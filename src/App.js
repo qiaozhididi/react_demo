@@ -36,6 +36,7 @@ import FragMentDemo from "./Fragments/FragmentDemo";
 import MyError from "./Fragments/MyError";
 import List from "./Fragments/List";
 import ErrorBoundary from "./Fragments/ErrorBoundary";
+import JsError from "./Fragments/JsError";
 
 function App() {
   const name = "QzFrato";
@@ -124,8 +125,9 @@ function App() {
       <h2>错误边界</h2>
       <List />
       {/* <MyError /> */}
+      <ErrorBoundary>{/* <MyError /> */}</ErrorBoundary>
       <ErrorBoundary>
-        <MyError />
+        <JsError />
       </ErrorBoundary>
     </div>
   );
