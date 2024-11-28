@@ -766,3 +766,10 @@ class MyComponent extends React.Component {
 
 转发 Refs 到DOM组件
 通过在函数组件上使用 React.forwardRef 来转发 Refs。
+
+
+### 回调Refs
+
+React 也支持另一种设置 refs 的方式，不同于传递 React.createRef() 创建的Refs，我们可以给ref属性传递一个函数。在这个函数中通过参数来获取 React 组件实例或 HTML DOM 元素。
+
+提示：React 将在组件挂载时，会调用 ref 回调函数并传入 DOM 元素，当卸载时调用它并传入 null。在 componentDidMount 或 componentDidUpdate 触发前，React 会保证 refs 一定是最新的。

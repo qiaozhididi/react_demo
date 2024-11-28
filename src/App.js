@@ -40,6 +40,7 @@ import JsError from "./Fragments/JsError";
 import RefsDemo from "./Refs/RefsDemo";
 import RefsClassDemo from "./Refs/RefsClassDemo";
 import RefsFunDemo from "./Refs/RefsFunDemo";
+import RefsCallBack from "./Refs/RefsCallBack";
 
 function App() {
   const name = "QzFrato";
@@ -135,6 +136,7 @@ function App() {
       <RefsDemo />
       <RefsClassDemo />
       <RefsFunDemo />
+      <RefsCallBack />
     </div>
   );
 }
