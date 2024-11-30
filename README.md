@@ -773,3 +773,12 @@ class MyComponent extends React.Component {
 React 也支持另一种设置 refs 的方式，不同于传递 React.createRef() 创建的Refs，我们可以给ref属性传递一个函数。在这个函数中通过参数来获取 React 组件实例或 HTML DOM 元素。
 
 提示：React 将在组件挂载时，会调用 ref 回调函数并传入 DOM 元素，当卸载时调用它并传入 null。在 componentDidMount 或 componentDidUpdate 触发前，React 会保证 refs 一定是最新的。
+
+## 高阶组件
+高阶组件也是组件, 只不过它接收一个组件作为参数, 并返回一个新的组件。
+
+可以把高阶组件看作是组件的加工厂，接收旧组件返回包装后的新组件。
+
+### 什么情况下使用高阶组件
+
+React 如果有多个组件都用到了同一段逻辑，这是就可以把共同的逻辑部分提取出来，利用高阶组件的形式将这段逻辑整合到每一个组件中，从而减少代码的逻辑重复。

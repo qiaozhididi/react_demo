@@ -41,6 +41,10 @@ import RefsDemo from "./Refs/RefsDemo";
 import RefsClassDemo from "./Refs/RefsClassDemo";
 import RefsFunDemo from "./Refs/RefsFunDemo";
 import RefsCallBack from "./Refs/RefsCallBack";
+import UserView1 from "./HighComponents/UserView1";
+import UserView2 from "./HighComponents/UserView2";
+import UView1 from "./HighComponents/UView1";
+import UView2 from "./HighComponents/UView2";
 
 function App() {
   const name = "QzFrato";
@@ -56,6 +60,17 @@ function App() {
   //声明导航数据
   const navs1 = ["Python", "前端", "Java", "C#"];
   const navs2 = ["聊天", "图片", "视频", "地图"];
+
+  //存储信息到本地
+  const clickHandler = () => {
+    localStorage.setItem(
+      "userInfo",
+      JSON.stringify({
+        userName: "QzFrato",
+        nickName: "QzDD",
+      })
+    );
+  };
   return (
     <div className="container">
       {/* 基础使用 */}
@@ -133,10 +148,17 @@ function App() {
       {/* <ErrorBoundary>
         <JsError />
       </ErrorBoundary> */}
-      <RefsDemo />
+      {/* <RefsDemo />
       <RefsClassDemo />
       <RefsFunDemo />
-      <RefsCallBack />
+      <RefsCallBack /> */}
+
+      <h1>高阶组件HOC</h1>
+      <button onClick={clickHandler}>存储信息到本地</button>
+      <UserView1 />
+      <UserView2 />
+      <UView1 title="标题信息" />
+      <UView2 />
     </div>
   );
 }
