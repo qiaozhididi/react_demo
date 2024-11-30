@@ -45,6 +45,7 @@ import UserView1 from "./HighComponents/UserView1";
 import UserView2 from "./HighComponents/UserView2";
 import UView1 from "./HighComponents/UView1";
 import UView2 from "./HighComponents/UView2";
+import EffectView from "./HighComponents/EffectView";
 
 function App() {
   const name = "QzFrato";
@@ -159,6 +160,7 @@ function App() {
       <UserView2 />
       <UView1 title="标题信息" />
       <UView2 />
+      <EffectView />
     </div>
   );
 }
