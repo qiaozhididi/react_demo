@@ -46,6 +46,7 @@ import UserView2 from "./HighComponents/UserView2";
 import UView1 from "./HighComponents/UView1";
 import UView2 from "./HighComponents/UView2";
 import EffectView from "./HighComponents/EffectView";
+import PropsDemo from "./HighComponents/PropsDemo";
 
 function App() {
   const name = "QzFrato";
@@ -161,6 +162,7 @@ function App() {
       <UView1 title="标题信息" />
       <UView2 />
       <EffectView />
+      <PropsDemo age={20} name={["qz", "dd"]} />
     </div>
   );
 }
