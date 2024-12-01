@@ -822,3 +822,10 @@ HOC 是纯函数，没有副作用。
 ### 异常捕获边界
 
 如果模块加载失败（如网络问题），它会触发一个错误。你可以通过异常捕获边界（Error boundaries）技术来处理这些情况，以显示良好的用户体验并管理恢复事宜。
+
+### shouldComponentUpdate
+当一个组件的 props 或 state 变更，React 会将最新返回的元素与之前渲染的元素进行对比，以此决定是否有必要更新真实的 DOM。当它们不相同时，React 会更新该 DOM
+
+shouldComponentUpdate 方法会在重新渲染前被触发。其默认实现总是返回 true，让 React 执行更新。
+
+如果有些情况下你的组件不需要更新，你可以在 shouldComponentUpdate 中返回 false 来跳过整个渲染过程。

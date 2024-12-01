@@ -48,6 +48,7 @@ import UView2 from "./HighComponents/UView2";
 import EffectView from "./HighComponents/EffectView";
 import PropsDemo from "./HighComponents/PropsDemo";
 import Layout from "./LazyComponent/Layout";
+import ColorButtonParent from "./LazyComponent/ColorButtonParent";
 
 function App() {
   const name = "QzFrato";
@@ -164,8 +165,9 @@ function App() {
       <UView2 />
       <EffectView />
       <PropsDemo age={20} name={["qz", "dd"]} /> */}
-
+      <h2>性能优化</h2>
       <Layout />
+      <ColorButtonParent />
     </div>
   );
 }

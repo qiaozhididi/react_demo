@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class MyError extends Component {
   constructor(props) {
-    // super(props);
+    super(props);
     this.state = {
       hasError: false,
     };
