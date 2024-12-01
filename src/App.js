@@ -47,6 +47,7 @@ import UView1 from "./HighComponents/UView1";
 import UView2 from "./HighComponents/UView2";
 import EffectView from "./HighComponents/EffectView";
 import PropsDemo from "./HighComponents/PropsDemo";
+import Layout from "./LazyComponent/Layout";
 
 function App() {
   const name = "QzFrato";
@@ -155,14 +156,16 @@ function App() {
       <RefsFunDemo />
       <RefsCallBack /> */}
 
-      <h1>高阶组件HOC</h1>
+      {/* <h1>高阶组件HOC</h1>
       <button onClick={clickHandler}>存储信息到本地</button>
       <UserView1 />
       <UserView2 />
       <UView1 title="标题信息" />
       <UView2 />
       <EffectView />
-      <PropsDemo age={20} name={["qz", "dd"]} />
+      <PropsDemo age={20} name={["qz", "dd"]} /> */}
+
+      <Layout />
     </div>
   );
 }
