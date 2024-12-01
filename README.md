@@ -829,3 +829,6 @@ HOC 是纯函数，没有副作用。
 shouldComponentUpdate 方法会在重新渲染前被触发。其默认实现总是返回 true，让 React 执行更新。
 
 如果有些情况下你的组件不需要更新，你可以在 shouldComponentUpdate 中返回 false 来跳过整个渲染过程。
+
+### 时间碎片
+js执行永远要比dom渲染快的多。 所以对于大量的数据，一次性渲染，容易造成卡顿，卡死的情况。

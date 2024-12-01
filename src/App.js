@@ -49,6 +49,7 @@ import EffectView from "./HighComponents/EffectView";
 import PropsDemo from "./HighComponents/PropsDemo";
 import Layout from "./LazyComponent/Layout";
 import ColorButtonParent from "./LazyComponent/ColorButtonParent";
+import LargeDom from "./LazyComponent/LargeDom";
 
 function App() {
   const name = "QzFrato";
@@ -168,6 +169,7 @@ function App() {
       <h2>性能优化</h2>
       <Layout />
       <ColorButtonParent />
+      <LargeDom />
     </div>
   );
 }
