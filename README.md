@@ -914,3 +914,8 @@ PropTypes.func.isRequired
 PropTypes.any.isRequired
 
 ```
+
+### 默认Prop值
+可以通过配置特定的 defaultProps 属性来定义 props 的默认值
+
+提示： 类型检查也适用于 defaultProps。

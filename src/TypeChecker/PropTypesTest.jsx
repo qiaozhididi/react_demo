@@ -6,7 +6,7 @@ export default class PropTypesTest extends Component {
     return (
       <div>
         <h3>PropTypes类型检查</h3>
-        <Child title={"测试数据"} name={["qz","dd"]}/>
+        <Child title={"测试数据"} name={["qz","dd"]} age={20}/>
       </div>
     );
   }

@@ -12,6 +12,7 @@ export default class Child extends Component {
             return <li key={index}>{item}</li>;
           })}
         </ul>
+        <p>{this.props.age}</p>
       </div>
     );
   }
@@ -20,4 +21,10 @@ export default class Child extends Component {
 Child.propTypes = {
   title: PropTypes.string.isRequired, // 类型检查 必须选项
   name: PropTypes.array, // 类型检查
+  age: PropTypes.number,
+};
+
+//默认prop值
+Child.defaultProps = {
+  age: 25,
 };
