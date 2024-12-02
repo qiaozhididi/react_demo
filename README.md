@@ -837,3 +837,80 @@ js执行永远要比dom渲染快的多。 所以对于大量的数据，一次�
 虚拟列表是按需显示的一种技术，不必渲染所有列表项，而只是渲染可视区域内的一部分列表元素的技术。
 
 可以使用react-virtualized虚拟滚动库
+
+## PropTypes 类型检查
+组件可以通过props传递数据，针对传递的数据类型我们可以进行类型检查，有益于在代码运行前识别某些类型的问题
+
+在组件的 props 上进行类型检查，要引用prop-types库提供一系列验证器
+```js
+//PropTypesTest.js
+import PropTypes from 'prop-types';
+
+
+export default class PropTypesTest extends React.Component {
+ render() {
+  return (
+   <h1>Hello, {this.props.name}</h1>
+   );
+  }
+}
+
+
+PropTypesTest.propTypes = {
+ name: PropTypes.string
+};
+
+//使用
+//App.js
+<PropTypesTest name={{name:'Qzfrato'}}/>
+
+```
+
+提示：当传入的 prop 值类型不正确时，JavaScript 控制台将会显示警告,出于性能方面的考虑，propTypes 仅在开发模式下进行检查
+
+PropTypes 检查的范围包括：
+```js
+PropTypes.array
+PropTypes.bool
+PropTypes.func
+PropTypes.number
+PropTypes.object
+PropTypes.string
+PropTypes.symbol
+// 任何可被渲染的元素（包括数字、字符串、元素或数组）
+// (或 Fragment) 也包含这些类型。
+PropTypes.node
+// 一个 React 元素。
+PropTypes.element
+// 一个 React 元素类型（即，MyComponent）。
+PropTypes.elementType,
+// 你也可以声明 prop 为类的实例，这里使用
+// JS 的 instanceof 操作符。
+PropTypes.instanceOf(Message)
+// 你可以让你的 prop 只能是特定的值，指定它为
+// 枚举类型。
+PropTypes.oneOf(['News', 'Photos'])
+// 一个对象可以是几种类型中的任意一个类型
+PropTypes.oneOfType([
+ PropTypes.string,
+ PropTypes.number,
+ PropTypes.instanceOf(Message)
+])
+
+
+// 可以指定一个数组由某一类型的元素组成
+PropTypes.arrayOf(PropTypes.number)
+// 可以指定一个对象由某一类型的值组成
+PropTypes.objectOf(PropTypes.number),
+// 可以指定一个对象由特定的类型值组成
+PropTypes.shape({
+ color: PropTypes.string,
+ fontSize: PropTypes.number
+})
+// 你可以在任何 PropTypes 属性后面加上 `isRequired` ，确保
+// 这个 prop 没有被提供时，会打印警告信息。
+PropTypes.func.isRequired
+// 任意类型的数据
+PropTypes.any.isRequired
+
+```

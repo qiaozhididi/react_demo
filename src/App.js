@@ -51,6 +51,7 @@ import Layout from "./LazyComponent/Layout";
 import ColorButtonParent from "./LazyComponent/ColorButtonParent";
 import LargeDom from "./LazyComponent/LargeDom";
 import LargeDomLib from "./LazyComponent/LargeDomLib";
+import PropTypesTest from "./TypeChecker/PropTypesTest";
 
 function App() {
   const name = "QzFrato";
@@ -167,11 +168,13 @@ function App() {
       <UView2 />
       <EffectView />
       <PropsDemo age={20} name={["qz", "dd"]} /> */}
-      <h2>性能优化</h2>
-      <Layout />
-      <ColorButtonParent />
+      {/* <h2>性能优化</h2> */}
+      {/* <Layout /> */}
+      {/* <ColorButtonParent /> */}
       {/* <LargeDom /> */}
-      <LargeDomLib/>
+      {/* <LargeDomLib/> */}
+      <h2>类型检查</h2>
+      <PropTypesTest />
     </div>
   );
 }
