@@ -919,3 +919,30 @@ PropTypes.any.isRequired
 可以通过配置特定的 defaultProps 属性来定义 props 的默认值
 
 提示： 类型检查也适用于 defaultProps。
+
+## TypeScript 类型检查
+需要在创建项目的时候使用TS作为语言。
+```js
+npx create-react-app my-ts-app --template typescript
+
+
+import React, { Component } from 'react'
+
+
+//定义props的类型
+type Props={
+  name:string
+}
+
+
+export default class Test extends Component<Props> {
+ render() {
+  return (
+   <div>{this.props.name}</div>
+   )
+  }
+}
+
+
+
+```
