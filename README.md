@@ -942,7 +942,15 @@ export default class Test extends Component<Props> {
    )
   }
 }
-
-
-
 ```
+
+## Hook简介
+Hook 是 React 16.8 的新增特性
+
+Hook 都是些函数，这些函数能让你不使用class的情况下还能 “钩入” React state 及生命周期等特性。
+
+为什么要用Hook？
+- 函数组件没有state，没有生命周期，没有this，没有context。
+- 使用Hook可以让函数组件也有state，有生命周期，有this，有context。
+
+如果你在编写函数组件并意识到需要向其添加一些 state，以前的做法是必须将其它转化为 class。现在你可以在现有的函数组件中使用 Hook
